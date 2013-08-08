@@ -1,0 +1,33 @@
+<div class="container">
+
+<h2><txp:section /></h2>
+
+<txp:if_article_list>
+
+    <txp:if_excerpt>
+    <txp:title />
+        <txp:excerpt />
+        <p class="read-more">
+           <txp:permlink><txp:title /></txp:permlink>
+        </p>
+    <txp:else />
+    <txp:title />
+        <txp:body />
+    </txp:if_excerpt>
+
+<txp:else />
+
+    <txp:if_excerpt>
+        <txp:excerpt />
+    </txp:if_excerpt>
+
+<article role="article" itemscope itemtype="http://schema.org/Article">
+    <div id="body">
+        <txp:body />
+    </div>
+
+</article>
+
+</txp:if_article_list>
+
+</div>

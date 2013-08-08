@@ -1,0 +1,7 @@
+<header  id="top">
+  <h1><txp:link_to_home><txp:page_title /></txp:link_to_home></h1>
+  <h2><txp:site_slogan /></h2>
+
+<!-- navigation -->
+<txp:output_form form="navigation" /><!-- /navigation -->    
+</header>

@@ -1,0 +1,13 @@
+<nav>
+
+<div class="container">
+
+<txp:section_list wraptag="ul" break="">
+  <li<txp:if_section name='<txp:section />'><txp:if_search><txp:else /><txp:if_category><txp:else /><txp:if_author><txp:else /> class="active"</txp:if_author></txp:if_category></txp:if_search></txp:if_section>>
+    <a href="#<txp:section />"<txp:section title="1" link="1" />
+  </li>
+</txp:section_list>
+
+</div>
+
+</nav>

@@ -1,0 +1,16 @@
+<article role="article" itemscope itemtype="http://schema.org/Article">
+
+<div class="container">
+
+<h2><txp:title /></h2>
+
+<div itemprop="articleBody">
+  <txp:body />
+</div>
+
+</div>
+
+<div id="map" style="width: 100%; height: 300px"></div>
+
+
+</article>
