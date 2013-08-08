@@ -1,4 +1,4 @@
 kathik
 ======
 
-A website made with textpattern
+A website made with Textpattern
