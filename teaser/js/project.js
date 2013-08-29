@@ -8,12 +8,11 @@ var geoJson = [{
   type: 'Feature',
   "geometry": { "type": "Point", "coordinates": [16.3671079,48.2596096]},
   "properties": {
-    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Cherry_Blossoms_and_Washington_Monument.jpg/320px-Cherry_Blossoms_and_Washington_Monument.jpg",
-    "url": "http://en.wikipedia.org/wiki/Washington,_D.C.",
+    
     "marker-symbol": "star",
     "marker-size": "small",
     "marker-color": "#F00",
-    "city": "Washington, D.C."
+    "address": "<strong>Ordination</strong><br/>Heiligenstädter Straße 195,<br/> 1190 Wien"
   }
 }];
 
@@ -28,15 +27,12 @@ map.markerLayer.on('ready', function(e) {
     var feature = marker.feature;
 
     // Create custom popup content
-    var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
-              '<img src="' + feature.properties.image + '">' +
-              '   <h2>' + feature.properties.city + '</h2>' +
-              '</a>';
+    var popupContent =  '<p>' + feature.properties.address + '</p>';
 
     // http://leafletjs.com/reference.html#popup
     marker.bindPopup(popupContent,{
       closeButton: false,
-      minWidth: 320
+      minWidth: 150
     });
 
   });
@@ -57,24 +53,6 @@ $(document).ready(function() {
       
   return false;
    });
-
-
-  $('.simple-ajax-popup-align-top').magnificPopup({
-    type: 'ajax',
-    alignTop: true,
-    overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
-  });
-
-  $('.simple-ajax-popup').magnificPopup({
-    type: 'ajax',
-    mainClass: 'mfp-with-zoom', // this class is for CSS animation below
-    zoom: {
-      enabled: true,
-      duration: 300,
-      easing: 'ease-in-out'
-    }
-  });
-
 });
 
 

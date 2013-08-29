@@ -34,7 +34,7 @@
 
 <!-- .service -->
 <section class="service" id="service">
-  <txp:article_custom category="service" form="service" />
+  <txp:article_custom category="service" form="service" sort="custom_1 asc" />
 </section><!-- /.about -->
 
 
@@ -50,6 +50,7 @@
 
 <script src="http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js"></script>
 <script src="<txp:site_url />js/jquery-2.0.1.min.js"></script>
+<script src="<txp:site_url />js/jquery.magnific-popup.min.js?v=0.9.5"></script>
 <script src="<txp:site_url />js/project.js"></script>
 
 </body>

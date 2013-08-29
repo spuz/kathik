@@ -1,33 +1,31 @@
-<div class="container">
+<txp:if_first_article><ul id="article-list" class="container"></txp:if_first_article>
 
-<h2><txp:section /></h2>
+  <txp:if_custom_field name="class">
+    <li role="article" itemscope itemtype="http://schema.org/Article" class="<txp:custom_field name="class" />">
+  <txp:else />
+    <li role="article" itemscope itemtype="http://schema.org/Article">
+  </txp:if_custom_field>
 
-<txp:if_article_list>
+    <h3 itemprop="name"><txp:title /></h3>
+
+    <txp:if_article_image>
+
+      <txp:article_image width="0" height="0" />
+
+    </txp:if_article_image>
+
 
     <txp:if_excerpt>
-    <txp:title />
+
+      <div itemprop="description">
         <txp:excerpt />
-        <p class="read-more">
-           <txp:permlink><txp:title /></txp:permlink>
-        </p>
+      </div>
+
     <txp:else />
-    <txp:title />
-        <txp:body />
+
+      <txp:body />
+
     </txp:if_excerpt>
 
-<txp:else />
-
-    <txp:if_excerpt>
-        <txp:excerpt />
-    </txp:if_excerpt>
-
-<article role="article" itemscope itemtype="http://schema.org/Article">
-    <div id="body">
-        <txp:body />
-    </div>
-
-</article>
-
-</txp:if_article_list>
-
-</div>
+  </li>
+<txp:if_last_article></ul></txp:if_last_article>
