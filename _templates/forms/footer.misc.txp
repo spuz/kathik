@@ -1,17 +1,13 @@
 <footer>
 
-<div class="container">
-
-<p>Impressum</p>
-
 <nav>
-<txp:section_list wraptag="ul" break="">
-  <li<txp:if_section name='<txp:section />'><txp:if_search><txp:else /><txp:if_category><txp:else /><txp:if_author><txp:else /> class="active"</txp:if_author></txp:if_category></txp:if_search></txp:if_section>>
-    <txp:section title="1" link="1" />
-  </li>
-</txp:section_list>
+  <ul>
+    <li><a href="#top"><txp:section link="0" title="1" name="about" /></a></li>
+    <li><a href="#<txp:section link="0" title="0" name="leistungen" />"><txp:section link="0" title="1" name="leistungen" /></a></li>
+    <li><a href="#<txp:section link="0" title="0" name="contact" />"><txp:section link="0" title="1" name="contact" /></a></li>
+    <li><a href="<txp:site_url />index.php?id=7" class="simple-ajax-popup" />Impressum</a></li>
+  </ul>
 </nav>
 
-<div class="container">
 
 </footer>

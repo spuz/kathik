@@ -5,13 +5,15 @@
   <meta charset="utf-8" />
   <title><txp:page_title /></title>
 
-  <link rel="stylesheet" href="<txp:site_url />_templates/stylesheets/screen.css" />
+  <link href="<txp:site_url />_templates/css/screen.css" rel="stylesheet" />
   <link href="http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css" rel="stylesheet" />
 
-  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:700,400|Open+Sans:400italic,600italic,400,600" rel="stylesheet" type="text/css">
-  <!--[if IE]>
+   <!--[if lte IE 9]>
+    <link href="<txp:site_url />_templates/css/ie.css" rel="stylesheet" />   
     <script src="<txp:site_url />js/html5shiv.js"></script>
+    <script src="<txp:site_url />js/respond.min.js"></script>
   <![endif]-->
+
 
   <!--[if lte IE 8]>
     <link href="http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.ie.css" rel="stylesheet" />
@@ -27,19 +29,29 @@
 <txp:output_form form="header" /><!-- /header -->
 
 <!-- .about -->
-<section class="about" id="about">
+<section class="about container" id="about">
   <txp:article_custom id="2" form="about" />
 </section><!-- /.about -->
 
 
 <!-- .service -->
-<section class="service" id="service">
-  <txp:article_custom category="service" form="service" sort="custom_1 asc" />
+<section class="service" id="leistungen">
+  <div class="container divider">
+    <txp:section link="0" title="1" name="leistungen" wraptag="h2" />
+    <button class="top"></button>
+  </div>
+  <div class="container">
+    <txp:article_custom category="service" form="service" sort="custom_1 asc" />
+  </div>
 </section><!-- /.about -->
 
 
 <!-- .contact -->
 <section class="contact" id="contact">
+  <div class="container divider">
+    <txp:section link="0" title="1" name="contact" wraptag="h2" />
+    <button class="top"></button>
+  </div>
   <txp:article_custom id="3" form="contact" />
 </section><!-- /.contact -->
 
@@ -49,7 +61,7 @@
 
 
 <script src="http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js"></script>
-<script src="<txp:site_url />js/jquery-2.0.1.min.js"></script>
+<script src="<txp:site_url />js/jquery-1.10.2.min.js"></script>
 <script src="<txp:site_url />js/jquery.magnific-popup.min.js?v=0.9.5"></script>
 <script src="<txp:site_url />js/project.js"></script>
 

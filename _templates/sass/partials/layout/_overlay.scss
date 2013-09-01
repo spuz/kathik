@@ -1,0 +1,22 @@
+.mfp-content {
+  @include container(10);
+  background-color: $paper-white;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+.overlay {
+  @include leader(1);
+  @include trailer(1);
+  @include pad(1,1);
+  @include at-breakpoint($mama-bear) {
+    @include leader(3);
+    @include trailer(5);
+    @include pad(1,1);
+  }
+  h2 {
+    font-family: $sans-serif;
+    text-align: left;
+  }
+  @include baseline-grid-background($base-line-height,rgba(0,172,236,0.1));
+}

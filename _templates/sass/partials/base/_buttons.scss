@@ -1,0 +1,52 @@
+// button {
+//   border: none;
+//   text-align: center;
+//   @include adjust-font-size-to(14px);
+//   background-color: $brand;
+// }
+
+
+%button {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  border: 1px solid $brand;
+  color: $paper-white;
+  font-weight: 600;
+  background-color: $brand;
+  @include trailer(1);
+  &:hover {
+    background-color: lighten($brand,5%);
+  }
+}
+
+
+
+.toggle {
+  width: 12em;
+  @include adjust-font-size-to(14px);
+  @include border-radius(0.25em);
+  @extend %button;
+  &:active {
+    position: relative;
+    top: 1px;
+  }  
+}
+
+
+.top {
+  position: relative;
+  top: -1px;
+  float: right;
+  padding: 0 0.5em;
+//   @include span-columns(4 omega,12);
+  @include border-bottom-radius(0.5em);
+    @include adjust-font-size-to(11px);
+//   @include at-breakpoint($mama-bear) {
+//     @include span-columns(2 omega, 12);
+//   }
+  @extend %button;
+  &:before {
+    content: getUnicode('⬆');
+  }
+}

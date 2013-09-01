@@ -1,0 +1,14 @@
+<article role="article" itemscope itemtype="http://schema.org/Article">
+
+<div class="overlay">
+
+<h2><txp:title /></h2>
+
+<div itemprop="articleBody" class="article-body">
+  <txp:body />
+</div>
+
+</div>
+
+
+</article>

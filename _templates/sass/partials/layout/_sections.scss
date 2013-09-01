@@ -1,0 +1,47 @@
+section {
+  @include trailer(4);
+  border-top: 1px solid $light-grey;
+  &#about {
+    border-top: none;
+  }
+  .divider {
+//     @include trailer(1);
+  }
+  h2 {
+    @include span-columns(6);
+    font-family: $sans-serif;
+    text-align: left;
+    @include leader(1);
+    @include at-breakpoint($mama-bear) {
+      @include span-columns(6);
+    }
+  }
+}
+
+
+#about {
+  .centered {
+    text-align: center;
+    @include container(6);
+  }
+}
+
+#leistungen {
+  article {
+    @include trailer(2);
+  }
+}
+
+#contact {
+  @include trailer(0);  
+  text-align: center;
+  @include at-breakpoint($mama-bear) {
+    text-align: left;
+  }
+}
+
+#contact img {
+  @include at-breakpoint($mama-bear) {
+    @include span-columns(6 omega,12);
+  }
+}

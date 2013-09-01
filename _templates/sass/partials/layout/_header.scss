@@ -1,0 +1,48 @@
+// header {
+//   background-color: darken($paper-white,10%);
+//   nav {
+//     border-top: 1px solid $brand;
+//     border-bottom: 1px solid $brand;
+//     ul {
+//       margin: 0;
+//       padding: 0.5em 0;
+//       li {
+//         @include adjust-font-size-to(16px);
+//       }
+//       @include at-breakpoint($mama-bear) {
+//         li {
+//           margin: 0 2em;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+header {
+  text-align: center;
+  width: 100%;
+  background-color: $brand;
+  @include margin-trailer(1);
+  @include padding-trailer(1);
+  @include box-shadow(rgba(0,0,0,0.5) 0 3px 5px 0);
+  @include at-breakpoint($mama-bear) {
+    @include trailer(2);
+  }
+  li {
+    @include adjust-font-size-to(16px);    
+    a {
+      color: $paper-white;
+      &:hover {
+        color: darken($paper-white,5%)
+      }
+    }
+  }
+  @include at-breakpoint($mama-bear) {
+    li:not(:last-child):after {
+      margin: 0 2em;
+      content: getUnicode('|');
+      color: $paper-white;
+    }
+  }
+}

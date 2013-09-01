@@ -2,15 +2,13 @@
 
 <div class="container">
 
-<h2><txp:title /></h2>
-
 <div itemprop="articleBody">
+  <txp:article_image wraptag="div" class="article-image" width="0" height="0" />
   <txp:body />
 </div>
 
 </div>
 
-<div id="map" style="width: 100%; height: 300px"></div>
-
-
 </article>
+
+<div id="map" style="width: 100%; height: 300px"></div>

@@ -1,0 +1,9 @@
+article {
+  img {
+  display: block;
+  border: 2px solid $light-grey;
+  @include border-radius(2px);
+  @include background-clip(content-box);
+  @include background-origin(border-box);
+  }
+}

@@ -1,6 +1,6 @@
-<header  id="top">
-  <h1><txp:link_to_home><txp:page_title /></txp:link_to_home></h1>
-  <h2><txp:site_slogan /></h2>
+<header id="top">
+  <h1><txp:page_title /></h1>
+  <h4><txp:site_slogan /></h4>
 
 <!-- navigation -->
 <txp:output_form form="navigation" /><!-- /navigation -->    

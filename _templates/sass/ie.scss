@@ -1,0 +1,18 @@
+@import "compass";
+header {
+  nav {
+    li {
+      margin: 0 2em;      
+    }
+  }
+}
+
+blockquote {
+  font-style: normal;
+}
+
+.top {
+  &:before {
+  content: url(../images/up.png);
+  }
+}

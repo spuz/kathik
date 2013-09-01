@@ -1,0 +1,148 @@
+@import "http://fonts.googleapis.com/css?family=Vollkorn:400italic|Roboto+Slab:700,400|Open+Sans:400italic,600italic,300,400,600,700,800";
+
+
+$serif:             "Roboto Slab", serif;
+$sans-serif:        "Open Sans", sans-serif;
+$special:           "Vollkorn";
+
+$base-font-size:    16px;
+$base-line-height:  24px;
+
+@include establish-baseline;
+
+html {
+  font-family: $sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif;
+  color: $brand;
+  @include leader(0);
+  @include trailer(0);
+}
+
+h1 {
+  color: $paper-white;
+  font-weight: 400;
+  @include adjust-font-size-to(16px);
+  @include adjust-leading-to(1, 18px);
+  @include leader(1, 24px, padding);
+  @include trailer(0);
+  @include at-breakpoint($mama-bear) {
+    @include adjust-font-size-to(24px);
+//     @include adjust-leading-to(1, 18px);
+  }
+}
+
+h2 {
+  font-weight: 800;  
+  text-align: center;
+  @include adjust-font-size-to(16px);
+  @include trailer(1, 16px);
+  @include at-breakpoint($mama-bear) {
+    @include adjust-font-size-to(18px);  
+  }
+}
+
+h3 {
+  font-family: $sans-serif;
+  font-weight: 700;
+  @include adjust-font-size-to(16px);
+  @include trailer(0.5,16px);
+}
+
+
+h4 {
+  font-family: $sans-serif;  
+  color: $paper-white;  
+  font-weight: 400;  
+  text-align: center;
+  @include adjust-font-size-to(12px);
+  @include trailer(1, 16px);
+  @include at-breakpoint($mama-bear) {
+    @include adjust-font-size-to(18px);  
+  }
+}
+
+ol,
+ul {
+  @include leader(0);
+}
+
+p {
+  font-weight: 400;
+  @include leader(0);
+  @include adjust-font-size-to(14px);
+  @include trailer(0.5,14px);
+}
+
+small {
+  @include adjust-font-size-to(12px);
+}
+
+// blockquote {
+//   margin: 0;
+//   font-family: $special;
+//   font-style: italic;
+//   text-align: center;
+//   color: $paper-white;
+//   background-color: $brand;
+//   @include adjust-font-size-to(16px);
+//   @include leader(1, 36px, padding);
+//   @include trailer(1, 36px, padding);
+//   @include trailer(1, 36px, margin);
+//   @extend %cf;
+//   @include at-breakpoint($mama-bear) {
+//     @include adjust-font-size-to(36px); 
+//   }
+//   p {
+// //     @include span-columns(11,12);
+//     @include pad(1,1);
+//   }
+// }
+
+
+$border-color: lighten($dark-grey, 15%);
+
+blockquote {
+  margin: 0;
+  border-top: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+  font-family: $special;
+  color: lighten($dark-grey, 10%);
+  font-style: italic;
+//   @include span-columns(12 omega);
+//   @include pad(1,1);
+  @include leader(1);
+  @include trailer(1);  
+  p {
+    text-align: center;
+    @include pad(1,1);
+    @include adjust-font-size-to(16px);
+    @include leader(1);
+    @include trailer(1);
+    @include at-breakpoint($mama-bear) {
+      @include adjust-font-size-to(18px);
+    }
+  }
+}
+
+a {
+  color: $brand;
+  text-decoration: none;
+  @include trailing-border(1px, 0, 1em, solid);
+  &:hover {
+    color: lighten($brand, 5%);
+  }
+}
+
+article {
+  li {
+    @include adjust-font-size-to(14px);
+  }
+}

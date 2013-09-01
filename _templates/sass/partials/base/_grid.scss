@@ -1,0 +1,25 @@
+$total-columns: 12;
+$column-width: 3em;
+$gutter-width: 1.5em;
+$grid-padding: $gutter-width;
+
+$show-grid-backgrounds  : false;
+
+body {
+  @include baseline-grid-background($base-line-height,rgba(0,172,236,0.1));
+}
+
+.container {
+  @include susy-grid-background;
+}
+
+@include border-box-sizing;
+
+@include at-breakpoint($mama-bear) {
+  .small {
+    @include span-columns(6,12);
+    &.omega {
+      @include span-columns(6 omega,12);
+    }
+  }
+}

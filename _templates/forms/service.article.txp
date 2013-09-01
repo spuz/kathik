@@ -1,9 +1,8 @@
-<txp:if_first_article><ul id="article-list" class="container"></txp:if_first_article>
-
+<article role="article" itemscope itemtype="http://schema.org/Article">
   <txp:if_custom_field name="class">
-    <li role="article" itemscope itemtype="http://schema.org/Article" class="<txp:custom_field name="class" />">
+    <div class="<txp:custom_field name="class" />">
   <txp:else />
-    <li role="article" itemscope itemtype="http://schema.org/Article">
+    <div>
   </txp:if_custom_field>
 
     <h3 itemprop="name"><txp:title /></h3>
@@ -27,5 +26,5 @@
 
     </txp:if_excerpt>
 
-  </li>
-<txp:if_last_article></ul></txp:if_last_article>
+  </div>
+</article>
