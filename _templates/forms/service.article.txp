@@ -9,7 +9,7 @@
 
     <txp:if_article_image>
 
-      <txp:article_image width="0" height="0" />
+      <txp:article_image wraptag="div" class="article-image" width="0" height="0" />
 
     </txp:if_article_image>
 

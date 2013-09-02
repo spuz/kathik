@@ -21,7 +21,7 @@ footer {
 .wide {
   clear: both;
   @include at-breakpoint($mama-bear) {
-    @include span-columns(7);
+//     @include span-columns(7);
 //     @include post(5);
   }
   @include trailer(2);
@@ -39,7 +39,6 @@ footer {
     padding: 0 0.75em 0 0;
   }
 }
-
 
 .panel {
   width: 100%;

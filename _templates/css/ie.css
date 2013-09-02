@@ -1,11 +1,14 @@
+/* line 4, ../sass/ie.scss */
 header nav li {
   margin: 0 2em;
 }
 
+/* line 10, ../sass/ie.scss */
 blockquote {
   font-style: normal;
 }
 
+/* line 15, ../sass/ie.scss */
 .top:before {
   content: url(../images/up.png);
 }

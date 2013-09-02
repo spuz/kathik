@@ -30,6 +30,12 @@ section {
   article {
     @include trailer(2);
   }
+  .wide img {
+    @include at-breakpoint($mama-bear) {
+      margin-left: 1.5em;
+      @include span-columns(6 omega,12);
+    }
+  }  
 }
 
 #contact {
