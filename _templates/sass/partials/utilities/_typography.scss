@@ -141,6 +141,13 @@ a {
   }
 }
 
+.overlay {
+  a {
+    color: $dark-grey;
+    @include trailing-border(0px, 0, 1em, solid);
+  }
+}
+
 article {
   li {
     @include adjust-font-size-to(14px);
