@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8" />
-  <title><txp:page_title /></title>
+  <title><txp:page_title /> | <txp:site_slogan /></title>
 
   <link href="<txp:site_url />_templates/css/screen.css" rel="stylesheet" />
   <link href="http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css" rel="stylesheet" />
